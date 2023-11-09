@@ -11,5 +11,30 @@
         public int PublicationYear { get; set; }
 
         public int Downloads { get; set; }
+
+        public void ValidateTitle()
+        {
+            if(Title==null)
+            {
+                throw new ArgumentNullException();
+            }
+            if(Title.Length==0) 
+            { 
+            
+            }
+
+        }
+
+        public void ArtistValidate()
+        {
+            if(Artist==null)
+            {
+                throw new ArgumentNullException();
+            }
+            if(Artist.Length==0)
+            {
+                throw new ArgumentNullException();
+            }
+        }
     }
 }

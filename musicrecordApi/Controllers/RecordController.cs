@@ -8,7 +8,12 @@ namespace musicrecordApi.Controllers
     [Route("Api/[Controller]")]
     public class RecordController : ControllerBase
     {
+        private RecordRepository _recordrepository=new();
+
         [HttpGet]
-        public List<Record>
+        public List<Record> getRecords()
+        {
+            return _recordrepository.GetAllRecords();
+        }
     }
 }
