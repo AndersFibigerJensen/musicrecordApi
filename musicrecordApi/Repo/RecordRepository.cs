@@ -9,7 +9,14 @@ namespace musicrecordApi.Repo
         public RecordRepository()
         {
             records.Add(new Record { Artist = "Luthor", Title = "For evigt", Duration = 180, Downloads = 100, PublicationYear = 2004 });
-            
+            records.Add(new Record { Artist = "Luthor", Title = "For evigt", Duration = 180, Downloads = 100, PublicationYear = 2004 });
+            records.Add(new Record { Artist = "Luthor", Title = "For evigt", Duration = 180, Downloads = 100, PublicationYear = 2004 });
         }
+
+        public List<Record> GetAllRecords()
+        {
+            return new List<Record>(records);
+        }
+
     }
 }
