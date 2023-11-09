@@ -19,7 +19,8 @@
                 throw new ArgumentNullException();
             }
             if(Title.Length==0) 
-            { 
+            {
+                throw new ArgumentOutOfRangeException();
             
             }
 
@@ -33,7 +34,7 @@
             }
             if(Artist.Length==0)
             {
-                throw new ArgumentNullException();
+                throw new ArgumentOutOfRangeException();
             }
         }
     }
