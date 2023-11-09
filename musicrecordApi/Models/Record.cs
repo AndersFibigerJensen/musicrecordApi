@@ -12,7 +12,7 @@
 
         public int Downloads { get; set; }
 
-        public void ValidateTitles()
+        public void ValidateTitle()
         {
             if(Title==null)
             {
@@ -21,7 +21,6 @@
             if(Title.Length==0) 
             {
                 throw new ArgumentOutOfRangeException();
-            
             }
 
         }
