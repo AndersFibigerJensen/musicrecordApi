@@ -12,7 +12,7 @@
 
         public int Downloads { get; set; }
 
-        public void ValidateTitle()
+        public void ValidateTitles()
         {
             if(Title==null)
             {
