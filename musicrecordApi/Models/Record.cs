@@ -2,9 +2,9 @@
 {
     public class Record
     {
-        public string Title { get; set; }
+        public string? Title { get; set; }
 
-        public string Artist { get; set; }
+        public string? Artist { get; set; }
 
         public int Duration { get; set; }
 
