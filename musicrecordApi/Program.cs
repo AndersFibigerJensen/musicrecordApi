@@ -23,6 +23,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseCors("allowall");
 app.UseAuthorization();
 
 app.MapControllers();

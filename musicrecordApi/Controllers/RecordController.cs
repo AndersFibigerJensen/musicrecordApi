@@ -11,9 +11,14 @@ namespace musicrecordApi.Controllers
         private RecordRepository _recordrepository=new();
 
         [HttpGet]
-        public List<Record> getRecords()
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        public ActionResult<List<Record>> getRecords([FromHeader] string? title = null, [FromHeader] string? artist=null)
         {
-            return _recordrepository.GetAllRecords();
+            List<Record> records = _recordrepository.GetAllRecords(title,artist);
+            if (records == null)
+                return NoContent();
+            return Ok(records);
         }
     }
 }
